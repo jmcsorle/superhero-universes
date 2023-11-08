@@ -1,24 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from '../Header/Header';
+import RandomCharacterSelection from '../RandomCharacterSelection/RandomCharacterSelection';
+import CharacterDetails from '../CharacterDetails/CharacterDetails';
+import Footer from '../Footer/Footer';
+import { useState, useEffect } from 'react';
+import { getAllCharacters } from '../../apiCalls';
 
 function App() {
+  const [allCharacters, setAllCharacters] = useState([]);
+  const [allVillains, setAllVillains] = useState([]);
+  const [allHeroes, setAllHeroes] = useState([]);
+  
+
+  useEffect(() => {
+    getAllCharacters()
+      .then((data) => {
+        setAllCharacters(data);
+      })
+      .catch((error) => console.log(error.message));
+  }, []);
+
+  console.log('ALL Characters', allCharacters);
+
+  const getAllVillains = () => {
+    return allCharacters.reduce((acc, character) => {
+      if (character.biography.alignment === 'bad') {
+        acc.push(character.id);
+      }
+      // setAllVillains(acc)
+      return acc;
+    }, []);
+  };
+
+  const getAllHeroes = () => {
+    return allCharacters.reduce((acc, character) => {
+      if (character.biography.alignment === 'good') {
+        acc.push(character.id);
+      }
+      return acc;
+    }, [])
+  }
+
+  console.log('VILLIAINS', getAllVillains());
+  console.log('HEROES', getAllHeroes());
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <RandomCharacterSelection allCharacters={allCharacters} />
+      <CharacterDetails />
+      <Footer />
+    </main>
   );
 }
 
