@@ -3,7 +3,6 @@ import heroImage from '../../Assets/CapMerica.png';
 import villainImage from '../../Assets/Joker.png';
 
 function RandomCharacterSelection( { handleRandomHeroSelection, handleRandomVillainSelection } ) {
-
     
     return (
         <div className="random-container">
