@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import RandomCharacterSelection from '../RandomCharacterSelection/RandomCharacterSelection';
 import CharacterDetails from '../CharacterDetails/CharacterDetails';
 import Footer from '../Footer/Footer';
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getAllCharacters } from '../../apiCalls';
 
@@ -41,14 +42,24 @@ function App() {
   return (
     <main>
       <Header />
-      <RandomCharacterSelection
-        handleRandomVillainSelection={handleRandomVillainSelection}
-        handleRandomHeroSelection={handleRandomHeroSelection}
-      />
-      <CharacterDetails
-        randomHero={randomHero}
-        randomVillain={randomVillain}
-      />
+      <Routes>
+        <Route 
+          path="/"
+          element={
+            <RandomCharacterSelection
+              handleRandomVillainSelection={handleRandomVillainSelection}
+              handleRandomHeroSelection={handleRandomHeroSelection}
+            />
+          }
+        />
+        <Route
+          path="/characterDetails"
+          element={<CharacterDetails
+            randomHero={randomHero}
+            randomVillain={randomVillain}
+          />} 
+        />
+      </Routes>
       <Footer />
     </main>
   );
