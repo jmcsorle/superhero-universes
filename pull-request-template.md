@@ -1,5 +1,4 @@
-#Superhero Universes - Pull Request Template
-Basic description: 
+# Superhero Universes - Pull Request Template
 ## Summary:
 - File(s) added/changed: ----
 - Short description of changes: ----
