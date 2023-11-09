@@ -1,5 +1,6 @@
 import './App.css';
 import Header from '../Header/Header';
+import NavigationBar from '../NavigationBar/NavigationBar';
 import RandomCharacterSelection from '../RandomCharacterSelection/RandomCharacterSelection';
 import CharacterDetails from '../CharacterDetails/CharacterDetails';
 import Footer from '../Footer/Footer';
@@ -50,6 +51,10 @@ function App() {
   return (
     <main>
       <Header />
+      <NavigationBar
+      setRandomVillain={setRandomVillain}
+      setRandomHero={setRandomHero}
+      />
       <Routes>
         <Route
           path="/"

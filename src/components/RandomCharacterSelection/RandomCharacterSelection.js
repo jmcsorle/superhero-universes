@@ -1,6 +1,6 @@
 import './RandomCharacterSelection.css';
-import heroImage from '../../Assets/CapMerica.png';
-import villainImage from '../../Assets/Joker.png';
+import heroImage from '../../assets/CapMerica.png';
+import villainImage from '../../assets/Joker.png';
 
 function RandomCharacterSelection( { handleRandomHeroSelection, handleRandomVillainSelection } ) {
     
