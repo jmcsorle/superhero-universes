@@ -1,8 +1,11 @@
 import './ImageCard.css';
 
-function ImageCard() {
+function ImageCard({ character }) {
     return (
-        <p>This is the image card</p>
+        <div>
+            <img src={character.images.md} alt={character.name} />
+            <h2></h2>
+        </div>
     )
 }
 
