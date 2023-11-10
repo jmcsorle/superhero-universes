@@ -4,15 +4,14 @@ import dcButton from '../../assets/DC_Button.png';
 import { useState } from 'react';
 
 function Quiz({ character }) {
-  const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState('');
 
   const handleAnswer = (answer) => {
-    if (answer === `${character.biography.publisher}`) {
-      const correct = `Yes! ${character.name} is from the ${character.biography.publisher} Universe! Their affiliations include: ${character.groupAffiliation}.`;
+    if (answer === `${character.publisher}`) {
+      const correct = `Yes! ${character.name} is from the ${character.publisher} Universe! Their affiliations include: ${character.groupAffiliation}.`;
       setFeedback(correct);
     } else {
-      const wrong = `No, ${character.name} is from the ${character.biography.publisher} Universe. Their affiliations include: ${character.groupAffiliation}.`;
+      const wrong = `No, ${character.name} is from the ${character.publisher} Universe. Affiliations include: ${character.groupAffiliation}.`;
       setFeedback(wrong);
     }
   };
@@ -24,10 +23,10 @@ function Quiz({ character }) {
       </div>
       <div className="button-container">
         <button onClick={() => handleAnswer('Marvel Comics')}>
-            <img src={marvelButton} alt="Marvel Universe"/>
+          <img src={marvelButton} alt="Marvel Universe" />
         </button>
         <button onClick={() => handleAnswer('DC Comics')}>
-         <img src={dcButton} alt="DC Universe"/>
+          <img src={dcButton} alt="DC Universe" />
         </button>
       </div>
       <div className="answer-container">{feedback && <p>{feedback}</p>}</div>

@@ -2,19 +2,18 @@ import './CharacterDetails.css';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import ImageCard from '../ImageCard/ImageCard';
 import Quiz from '../Quiz/Quiz';
-import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCharacterById } from '../../apiCalls';
 
-function CharacterDetails() {
+function CharacterDetails({ filteredData }) {
   const { id } = useParams();
-  const [currentCharacter, setCurrentCharacter] = useState(null);
 
-  useEffect(() => {
-    getCharacterById(id)
-      .then((data) => setCurrentCharacter(data))
-      .catch((error) => console.log(error.message));
-  }, [id]);
+  function getCharacterById(id) {
+    return filteredData.find((character) => {
+      return character.id === id;
+    });
+  }
+
+  let currentCharacter = getCharacterById(parseInt(id));
 
   if (!currentCharacter) {
     return <p>Loading ...</p>;
