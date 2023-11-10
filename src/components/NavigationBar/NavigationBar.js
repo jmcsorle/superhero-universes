@@ -1,11 +1,13 @@
 import './NavigationBar.css';
 import { Link, useLocation } from 'react-router-dom';
 
-function NavigationBar({ setRandomHero, setRandomVillain }) {
+function NavigationBar({ setRandomHero, setRandomVillain, setCurrentCharacter }) {
+  localStorage.removeItem('currentCharacter');
   const location = useLocation();
   const handleHomeClick = () => {
     setRandomHero(0);
     setRandomVillain(0);
+    setCurrentCharacter(0);
   };
 
   return (

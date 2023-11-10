@@ -10,13 +10,17 @@ function RandomCharacterSelection( { handleRandomHeroSelection, handleRandomVill
             <div className="random-hero">
                 <button onClick={handleRandomHeroSelection}>
                 <h2 className="hero-heading">Choose a Random Hero</h2>
+                <div className="hero-image">
                 <img src={heroImage} alt="" />
+                </div>
                 </button>
             </div>
             <div className="random-villain">
                 <button onClick={handleRandomVillainSelection}>
-                    <h2>Choose a Random Villain</h2>
+                    <h2 className="villain-heading">Choose a Random Villain</h2>
+                    <div className="villain-image">
                     <img src={villainImage} alt="" />
+                    </div>
                 </button>
             </div>
         </div>

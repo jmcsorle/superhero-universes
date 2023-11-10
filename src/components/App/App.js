@@ -36,24 +36,21 @@ function App() {
   const handleRandomVillainSelection = () => {
     const randomVillain = getRandomCharacter(allVillains);
     setRandomVillain(randomVillain);
-    navigate('/characterDetails');
+    navigate(`/characterDetails/${randomVillain.id}`);
   };
 
   const handleRandomHeroSelection = () => {
     const randomHero = getRandomCharacter(allHeroes);
     setRandomHero(randomHero);
-    navigate('/characterDetails');
+    navigate(`/characterDetails/${randomHero.id}`);
   };
-
-  // console.log('RANDOM HERO', randomHero);
-  // console.log('RANDOM VILLAIN', randomVillain);
 
   return (
     <main>
       <Header />
       <NavigationBar
-      setRandomVillain={setRandomVillain}
-      setRandomHero={setRandomHero}
+        setRandomVillain={setRandomVillain}
+        setRandomHero={setRandomHero}
       />
       <Routes>
         <Route
@@ -66,13 +63,8 @@ function App() {
           }
         />
         <Route
-          path="/characterDetails"
-          element={
-            <CharacterDetails
-              randomHero={randomHero}
-              randomVillain={randomVillain}
-            />
-          }
+          path="/characterDetails/:id"
+          element={<CharacterDetails />}
         />
       </Routes>
       <Footer />
