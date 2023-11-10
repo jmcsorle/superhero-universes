@@ -1,8 +1,13 @@
 import './ImageCard.css';
+import villainImage from '../../assets/Joker.png';
 
-function ImageCard() {
+function ImageCard({ character }) {
+
+
     return (
-        <p>This is the image card</p>
+        <div>
+            <img src={character.images.md || character.images.lg || villainImage} alt={character.name} />
+        </div>
     )
 }
 
