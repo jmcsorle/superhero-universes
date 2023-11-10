@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import { getAllCharacters } from '../../apiCalls';
 
 function App() {
+  const [filteredData, setFilteredData] = useState([]);
   const [allVillains, setAllVillains] = useState([]);
   const [allHeroes, setAllHeroes] = useState([]);
   const [randomVillain, setRandomVillain] = useState(0);
@@ -18,16 +19,69 @@ function App() {
   useEffect(() => {
     getAllCharacters()
       .then((data) => {
-        const villains = data.filter(
-          (character) => character.biography.alignment === 'bad'
+        const publishers = data.filter(
+          (character) =>
+            character.biography.publisher === 'Marvel Comics' ||
+            character.biography.publisher === 'DC Comics'
         );
+
+        const getHeroVillain = publishers.filter(
+          (character) =>
+            character.biography.alignment === 'good' ||
+            character.biography.alignment === 'bad'
+        );
+
+        const isValid = (value => value && value !== '-' && value !== 'undefined');
+
+        const cleanData = getHeroVillain.map((character) => {
+          const hasRequiredValues =
+            character.powerstats &&
+            isValid(character.appearance.race) &&
+            isValid(character.appearance.height[0]) &&
+            isValid(character.appearance.weight[0]) &&
+            character.images.md &&
+            character.images.lg &&
+            character.biography.publisher &&
+            isValid(character.biography.fullName) &&
+            character.biography.alignment &&
+            isValid(character.connections.groupAffiliation);
+
+          return hasRequiredValues
+            ? {
+                key: character.id,
+                id: character.id,
+                powerstats: character.powerstats,
+                name: character.name,
+                imageMD: character.images.md,
+                imageLG: character.images.lg,
+                race: character.appearance.race,
+                height: character.appearance.height[0],
+                weight: character.appearance.weight[0],
+                publisher: character.biography.publisher,
+                fullName: character.biography.fullName,
+                alignment: character.biography.alignment,
+                groupAffiliation: character.connections.groupAffiliation,
+              }
+            : null;
+        });
+
+        const finalData = cleanData.filter((character) => character !== null);
+
+        setFilteredData(finalData);
+
+        const villains = finalData.filter(
+          (character) => character.alignment === 'bad'
+        );
+        const heroes = finalData.filter(
+          (character) => character.alignment === 'good'
+        );
+
         setAllVillains(villains);
-        const heroes = data.filter(
-          (character) => character.biography.alignment === 'good'
-        );
         setAllHeroes(heroes);
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        console.log(error.message);
+      });
   }, []);
 
   const getRandomCharacter = (characterList) =>
@@ -64,7 +118,7 @@ function App() {
         />
         <Route
           path="/characterDetails/:id"
-          element={<CharacterDetails />}
+          element={<CharacterDetails filteredData={filteredData} />}
         />
       </Routes>
       <Footer />
