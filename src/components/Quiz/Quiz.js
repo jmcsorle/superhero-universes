@@ -2,6 +2,7 @@ import './Quiz.css';
 import marvelButton from '../../assets/Marvel_Button.png';
 import dcButton from '../../assets/DC_Button.png';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function Quiz({ character }) {
   const [feedback, setFeedback] = useState('');
@@ -48,3 +49,27 @@ function Quiz({ character }) {
 }
 
 export default Quiz;
+
+Quiz.propTypes = {
+  character: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    powerstats: PropTypes.shape({
+      intelligence: PropTypes.number.isRequired,
+      strength: PropTypes.number.isRequired,
+      speed: PropTypes.number.isRequired,
+      durability: PropTypes.number.isRequired,
+      power: PropTypes.number.isRequired,
+      combat: PropTypes.number.isRequired,
+    }),
+    name: PropTypes.string.isRequired,
+    imageMD: PropTypes.string.isRequired,
+    imageLG: PropTypes.string.isRequired,
+    race: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    weight: PropTypes.string.isRequired,
+    publisher: PropTypes.string.isRequired,
+    fullName: PropTypes.string.isRequired,
+    alignment: PropTypes.string.isRequired,
+    groupAffiliation: PropTypes.string.isRequired,
+  }),
+};
