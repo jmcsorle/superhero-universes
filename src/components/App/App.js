@@ -83,9 +83,13 @@ function App() {
       })
       .catch((error) => {
         console.log(error.message);
-        setError(`${error.message}: Please try again.`);
+        // navigate('/error')
+        setError(`${error.message}: We're sorry. It looks like the server is down. Please try again later.`);
       });
   }, []);
+
+  console.log("ALL VILLAINS", allVillains);
+  console.log("ALL Heroes", allHeroes);
 
   const getRandomCharacter = (characterList) =>
     characterList[Math.floor(characterList.length * Math.random())];
@@ -105,8 +109,8 @@ function App() {
   return (
     <main>
       <Header />
-      {error ? <ErrorComponent error={error} /> :
-      <>
+      {/* {error ? <ErrorComponent error={error} /> : */}
+      {/* <> */}
       <NavigationBar
         setRandomVillain={setRandomVillain}
         setRandomHero={setRandomHero}
@@ -125,9 +129,9 @@ function App() {
           path="/characterDetails/:id"
           element={<CharacterDetails filteredData={filteredData} />}
         />
-        <Route path="*" element={<ErrorComponent error={error} />} />
+        {/* <Route path="*" element={<ErrorComponent error={error} />} /> */}
       </Routes>
-      </>}
+      {/* </>} */}
     </main>
   );
 }

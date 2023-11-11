@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "key": 1,
+        "name": "A-Bomb",
+        "powerstats": {
+            "intelligence": 38,
+            "strength": 100,
+            "speed": 17,
+            "durability": 80,
+            "power": 24,
+            "combat": 64
+        },
+        "race": "Human",
+        "height": "6'8",
+        "weight": "980 lb",
+        "fullName": "Richard Milhouse Jones",
+        "publisher": "Marvel Comics",
+        "alignment": "good",
+        "groupAffiliation": "Hulk Family; Excelsior (sponsor), Avengers (honorary member); formerly partner of the Hulk, Captain America and Captain Marvel; Teen Brigade; ally of Rom",
+        "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+        "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
+    }
+]

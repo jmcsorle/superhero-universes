@@ -1,0 +1,91 @@
+[
+  {
+    "id": 4,
+    "key": 4,
+    "name": "Abomination",
+    "powerstats": {
+        "intelligence": 63,
+        "strength": 80,
+        "speed": 53,
+        "durability": 90,
+        "power": 62,
+        "combat": 95
+    },
+    "race": "Human / Radiation",
+    "height": [
+      "6'8",
+      "203 cm"
+    ],
+    "weight": [
+      "980 lb",
+      "441 kg"
+    ],
+    "fullName": "Emil Blonsky",
+    "publisher": "Marvel Comics",
+    "alignment": "bad",
+    "groupAffiliation": "former member of the crew of the Andromeda Starship, ally of the Abominations and Forgotten",
+    "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/4-abomination.jpg",
+    "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/4-abomination.jpg"
+},
+
+{
+  "id": 6,
+  "key": 6,
+  "name": "Absorbing Man",
+  "powerstats": {
+      "intelligence": 38,
+      "strength": 80,
+      "speed": 25,
+      "durability": 100,
+      "power": 98,
+      "combat": 64
+  },
+  "race": "Human",
+  "height": [
+      "6'4",
+      "193 cm"
+  ],
+  "weight": [
+      "270 lb",
+      "122 kg"
+  ],
+  "fullName": "Carl Creel",
+  "publisher": "Marvel Comics",
+  "alignment": "bad",
+  "groupAffiliation": "Masters of Evil, Lethal Legion; formerly Worthy, Frightful Four: former agent of Loki and They Who Wield Power",
+  "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/6-absorbing-man.jpg",
+  "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/6-absorbing-man.jpg"
+},
+
+{
+  "id": 309,
+  "key": 309,
+  "name": "Harley Quinn",
+  "powerstats": {
+      "intelligence": 88,
+      "strength": 12,
+      "speed": 33,
+      "durability": 65,
+      "power": 55,
+      "combat": 80
+  },
+  "race": "Human",
+  "height": [
+      "5'7",
+      "170 cm"
+  ],
+  "weight": [
+      "140 lb",
+      "63 kg"
+  ],
+  "fullName": "Harley Quinn",
+  "publisher": "DC Comics",
+  "alignment": "bad",
+  "groupAffiliation": "Formerly The Quintets, The Joker, Poison Ivy, Secret Six",
+  "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/309-harley-quinn.jpg",
+  "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/309-harley-quinn.jpg"
+}
+
+
+
+]
