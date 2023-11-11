@@ -1,0 +1,139 @@
+[
+    {
+        "id": 1,
+        "key": 1,
+        "name": "A-Bomb",
+        "powerstats": {
+            "intelligence": 38,
+            "strength": 100,
+            "speed": 17,
+            "durability": 80,
+            "power": 24,
+            "combat": 64
+        },
+        "race": "Human",
+        "height": "6'8",
+        "weight": "980 lb",
+        "fullName": "Richard Milhouse Jones",
+        "publisher": "Marvel Comics",
+        "alignment": "good",
+        "groupAffiliation": "Hulk Family; Excelsior (sponsor), Avengers (honorary member); formerly partner of the Hulk, Captain America and Captain Marvel; Teen Brigade; ally of Rom",
+        "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+        "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
+    },
+
+    {
+        "id": 97,
+        "key": 97,
+        "name": "Black Canary",
+        "powerstats": {
+            "intelligence": 63,
+            "strength": 8,
+            "speed": 33,
+            "durability": 20,
+            "power": 52,
+            "combat": 80
+        },
+        "race": "Metahuman",
+        "height": "5'7",
+        "weight": "130 lb",
+        "fullName": "Laurel Lance",
+        "publisher": "DC Comics",
+        "alignment": "good",
+        "groupAffiliation": "Birds of Prey; formerly Justice League of America, Justice Society of America, Justice League Task Force, Justice League International, Team Arrow",
+        "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/97-black-canary.jpg",
+        "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/97-black-canary.jpg"
+    },
+
+    {
+        "id": 226,
+        "key": 226,
+        "name": "Doctor Strange",
+        "powerstats": {
+            "intelligence": 100,
+            "strength": 10,
+            "speed": 12,
+            "durability": 84,
+            "power": 100,
+            "combat": 60
+        },
+        "race": "Human",
+        "height": "6'2",
+        "weight": "180 lb",
+        "fullName": "Stephen Strange",
+        "publisher": "Marvel Comics",
+        "alignment": "good",
+        "groupAffiliation": "Defenders, underground Avengers; formerly the Order, Midnight Sons; former disciple of the Ancient One",
+        "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/226-doctor-strange.jpg",
+        "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/226-doctor-strange.jpg"
+    },
+
+    {
+        "id": 4,
+        "key": 4,
+        "name": "Abomination",
+        "powerstats": {
+            "intelligence": 63,
+            "strength": 80,
+            "speed": 53,
+            "durability": 90,
+            "power": 62,
+            "combat": 95
+        },
+        "race": "Human / Radiation",
+        "height": "6'8",
+        "weight": "980 lb",
+        "fullName": "Emil Blonsky",
+        "publisher": "Marvel Comics",
+        "alignment": "bad",
+        "groupAffiliation": "former member of the crew of the Andromeda Starship, ally of the Abominations and Forgotten",
+        "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/4-abomination.jpg",
+        "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/4-abomination.jpg"
+    },
+    
+    {
+      "id": 6,
+      "key": 6,
+      "name": "Absorbing Man",
+      "powerstats": {
+          "intelligence": 38,
+          "strength": 80,
+          "speed": 25,
+          "durability": 100,
+          "power": 98,
+          "combat": 64
+      },
+      "race": "Human",
+      "height": "6'4",
+      "weight": "270 lb",
+      "fullName": "Carl Creel",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "groupAffiliation": "Masters of Evil, Lethal Legion; formerly Worthy, Frightful Four: former agent of Loki and They Who Wield Power",
+      "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/6-absorbing-man.jpg",
+      "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/6-absorbing-man.jpg"
+    },
+    
+    {
+      "id": 309,
+      "key": 309,
+      "name": "Harley Quinn",
+      "powerstats": {
+          "intelligence": 88,
+          "strength": 12,
+          "speed": 33,
+          "durability": 65,
+          "power": 55,
+          "combat": 80
+      },
+      "race": "Human",
+      "height": "5'7",
+      "weight": "140 lb",
+      "fullName": "Harley Quinn",
+      "publisher": "DC Comics",
+      "alignment": "bad",
+      "groupAffiliation": "Formerly The Quintets, The Joker, Poison Ivy, Secret Six",
+      "imageMD": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/309-harley-quinn.jpg",
+      "imageLG": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/309-harley-quinn.jpg"
+    }
+]

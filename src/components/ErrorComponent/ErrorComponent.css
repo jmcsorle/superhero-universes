@@ -10,23 +10,23 @@
     row-gap: 1rem;
 }
 
-.error-message {
-    grid-area: error-message;
+.error-message,
+.error-home-link {
     background-color: aliceblue;
-    margin: 2rem 4rem 1rem 4rem;
-    padding: 0;
     border: 6px solid black;
     border-radius: 6px
+}
 
+.error-message {
+    grid-area: error-message;
+    margin: 2rem 4rem 1rem 4rem;
+    padding: 0;
 }
 
 .error-home-link {
     grid-area: error-home-link;
-    background-color: aliceblue;
     margin: 0 auto;
     padding: 2rem;
-    border: 6px solid black;
-    border-radius: 6px;
 }
 
 .error-home-link :link,
@@ -44,5 +44,6 @@
 }
 
 .image-container img {
-    width: 80%
+    width: 80%;
+    border-radius: 6px;
 }
