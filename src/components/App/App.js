@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import RandomCharacterSelection from '../RandomCharacterSelection/RandomCharacterSelection';
 import CharacterDetails from '../CharacterDetails/CharacterDetails';
-import Footer from '../Footer/Footer';
+import ErrorComponent from '../ErrorComponent/ErrorComponent';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getAllCharacters } from '../../apiCalls';
@@ -14,6 +14,7 @@ function App() {
   const [allHeroes, setAllHeroes] = useState([]);
   const [randomVillain, setRandomVillain] = useState(0);
   const [randomHero, setRandomHero] = useState(0);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
