@@ -7,12 +7,8 @@
         'error-message'
         'error-home-link'
         'image-container';
-    grid-gap: 1rem;
+    row-gap: 1rem;
 }
-
-/* h2 {
-    
-} */
 
 .error-message {
     grid-area: error-message;
@@ -38,9 +34,15 @@
 .error-home-link :hover,
 .error-home-link :active
 {
-    color: #02335E; 
+    color: #02335E;
+    font-size: 1.25rem;
 }
 
 .image-container {
     grid-area: image-container;
+    width: 100%
+}
+
+.image-container img {
+    width: 80%
 }

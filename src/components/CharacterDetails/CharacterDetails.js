@@ -2,6 +2,7 @@ import './CharacterDetails.css';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import ImageCard from '../ImageCard/ImageCard';
 import Quiz from '../Quiz/Quiz';
+// import ErrorComponent from '../ErrorComponent/ErrorComponent';
 import { useParams } from 'react-router-dom';
 
 function CharacterDetails({ filteredData }) {
@@ -18,6 +19,12 @@ function CharacterDetails({ filteredData }) {
   if (!currentCharacter) {
     return <p>Loading ...</p>;
   }
+
+  // if (!currentCharacter) {
+  //   return (
+  //     <ErrorComponent error={`Character with ID ${id} not found.`} />
+  //   )
+  // }
 
   return (
     <div className="character-details">

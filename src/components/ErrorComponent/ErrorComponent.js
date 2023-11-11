@@ -13,7 +13,7 @@ function ErrorComponent({ error }) {
       ) : (
         <div className="error-message">
         <h2>Oops! Wrong page.</h2>
-        <p className="instructions">Please select the link to return to the home page.</p>
+        <p className="instructions">Please select the link to Return to Home Page or Choose Another Character.</p>
         </div>
       )}
       <div className="error-home-link">

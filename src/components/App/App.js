@@ -32,7 +32,8 @@ function App() {
             character.biography.alignment === 'bad'
         );
 
-        const isValid = (value => value && value !== '-' && value !== 'undefined');
+        const isValid = (value) =>
+          value && value !== '-' && value !== 'undefined';
 
         const cleanData = getHeroVillain.map((character) => {
           const hasRequiredValues =
@@ -82,6 +83,7 @@ function App() {
       })
       .catch((error) => {
         console.log(error.message);
+        setError(`${error.message}: Please try again.`);
       });
   }, []);
 
@@ -103,6 +105,8 @@ function App() {
   return (
     <main>
       <Header />
+      {error ? <ErrorComponent error={error} /> :
+      <>
       <NavigationBar
         setRandomVillain={setRandomVillain}
         setRandomHero={setRandomHero}
@@ -114,15 +118,16 @@ function App() {
             <RandomCharacterSelection
               handleRandomVillainSelection={handleRandomVillainSelection}
               handleRandomHeroSelection={handleRandomHeroSelection}
-            />
+              />
           }
         />
         <Route
           path="/characterDetails/:id"
           element={<CharacterDetails filteredData={filteredData} />}
         />
+        <Route path="*" element={<ErrorComponent error={error} />} />
       </Routes>
-      {/* <Footer /> */}
+      </>}
     </main>
   );
 }
