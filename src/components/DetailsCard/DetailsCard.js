@@ -3,10 +3,10 @@ import './DetailsCard.css';
 function DetailsCard({ character }) {
   return (
     <div className="random-details-card">
+      <div>
       <h2>{character.name}</h2>
       <p>{`${character.name}, also known as ${character.fullName}, is part of the ${character.race} race. This character is ${character.height} tall and weighs ${character.weight}s.`}</p>
-      <p>{`${character.name}'s powerstats are:`}</p>
-      <p>Powerstats:</p>
+      <p className="power-stats">{`${character.name}'s powerstats are:`}</p>
       <ul>
         <li>Intelligence = {`${character.powerstats.intelligence}`}</li>
         <li>Strength = {`${character.powerstats.strength}`}</li>
@@ -15,6 +15,7 @@ function DetailsCard({ character }) {
         <li>Power = {`${character.powerstats.power}`}</li>
         <li>Combat = {`${character.powerstats.combat}`}</li>
       </ul>
+      </div>
     </div>
   );
 }

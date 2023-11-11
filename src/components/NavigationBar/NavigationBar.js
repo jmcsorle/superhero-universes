@@ -10,10 +10,10 @@ function NavigationBar({ setRandomHero, setRandomVillain }) {
   };
 
   return (
-    <div>
+    <div className="nav-bar">
       {location.pathname !== '/' && (
         <Link className="home-link" to="/" onClick={handleHomeClick}>
-          Home
+          Choose Another Character
         </Link>
       )}
     </div>

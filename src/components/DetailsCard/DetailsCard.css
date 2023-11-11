@@ -1,3 +1,24 @@
 .random-details-card {
+    background-color: aliceblue;
+    margin: .5rem 1rem;
+}
 
+.random-details-card div {
+    margin: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.power-stats {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 500px) {
+    .random-details-card {
+        margin: 1rem;
+    }
 }

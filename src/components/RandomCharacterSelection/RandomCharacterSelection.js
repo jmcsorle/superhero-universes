@@ -6,18 +6,18 @@ function RandomCharacterSelection( { handleRandomHeroSelection, handleRandomVill
     
     return (
         <div className="random-container">
-            <p>How well do you know superheroes and supervillains?</p>
-            <div className="random-hero">
-                <button onClick={handleRandomHeroSelection}>
-                <h2 className="hero-heading">Choose a Random Hero</h2>
-                <div className="hero-image">
-                <img src={heroImage} alt="" />
+            <p className="introduction-text">How well do you know Superheroes and Supervillains?</p>
+            <div tabIndex="0" className="random-hero">
+                <button onClick={handleRandomHeroSelection} className="hero-button">
+                    <h2 className="hero-heading">Choose a<br />Random Hero</h2>
+                    <div className="hero-image">
+                    <img src={heroImage} alt="" />
                 </div>
                 </button>
             </div>
-            <div className="random-villain">
-                <button onClick={handleRandomVillainSelection}>
-                    <h2 className="villain-heading">Choose a Random Villain</h2>
+            <div tabIndex="0" className="random-villain">
+                <button onClick={handleRandomVillainSelection} className="villain-button">
+                    <h2 className="villain-heading">Choose a<br />Random Villain</h2>
                     <div className="villain-image">
                     <img src={villainImage} alt="" />
                     </div>

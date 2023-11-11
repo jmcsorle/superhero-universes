@@ -21,9 +21,12 @@ function CharacterDetails({ filteredData }) {
 
   return (
     <div className="character-details">
-      <ImageCard character={currentCharacter} />
-      <DetailsCard character={currentCharacter} />
-      <Quiz character={currentCharacter} />
+      <ImageCard character={currentCharacter} className="character-image" />
+      <DetailsCard
+        character={currentCharacter}
+        className="random-details-card"
+      />
+      <Quiz character={currentCharacter} className="quiz-container" />
     </div>
   );
 }

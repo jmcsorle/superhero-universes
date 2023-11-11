@@ -121,7 +121,7 @@ function App() {
           element={<CharacterDetails filteredData={filteredData} />}
         />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

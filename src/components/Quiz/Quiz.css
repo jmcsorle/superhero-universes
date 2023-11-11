@@ -1,0 +1,46 @@
+.button-container {
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    background: transparent;
+    border: none;
+}
+
+.button-container img {
+    width: 90%;
+}
+
+.quiz-container {
+    background-color: aliceblue;
+    margin: .5rem 1rem 1rem 1rem;
+}
+
+.quiz-content {
+    margin: 1rem 0;
+}
+
+.quiz-question,
+.feedback {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.quiz-question {
+    margin: .25rem .50rem .50rem .50rem;
+}
+
+.feedback {
+    margin: .5rem 2rem;
+}
+
+@media screen and (min-width: 500px) {
+    .quiz-container {
+        margin: 0 1rem 1rem 1rem;
+    }
+
+}
