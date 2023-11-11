@@ -1,16 +1,13 @@
 .nav-bar{
     display: flex;
     justify-content: center;
-    /* text-align: center; */
     margin: 0 auto;
     padding: 1rem 0;
     background: radial-gradient(circle, rgba(1, 49, 99, 1) 0%, rgba(221, 27, 34, 1) 100%);
-    border-top: 3px solid black;
     border-bottom: 3px solid black;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    /* margin: .5rem 0 .25rem 0; */
 }
 
 a:link,

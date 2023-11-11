@@ -1,0 +1,48 @@
+.error-handling {
+    max-width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'error-message'
+        'error-home-link'
+        'image-container';
+    row-gap: 1rem;
+}
+
+.error-message {
+    grid-area: error-message;
+    background-color: aliceblue;
+    margin: 2rem 4rem 1rem 4rem;
+    padding: 0;
+    border: 6px solid black;
+    border-radius: 6px
+
+}
+
+.error-home-link {
+    grid-area: error-home-link;
+    background-color: aliceblue;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 6px solid black;
+    border-radius: 6px;
+}
+
+.error-home-link :link,
+.error-home-link :visited,
+.error-home-link :hover,
+.error-home-link :active
+{
+    color: #02335E;
+    font-size: 1.25rem;
+}
+
+.image-container {
+    grid-area: image-container;
+    width: 100%
+}
+
+.image-container img {
+    width: 80%
+}

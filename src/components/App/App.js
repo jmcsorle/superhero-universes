@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import RandomCharacterSelection from '../RandomCharacterSelection/RandomCharacterSelection';
 import CharacterDetails from '../CharacterDetails/CharacterDetails';
-import Footer from '../Footer/Footer';
+import ErrorComponent from '../ErrorComponent/ErrorComponent';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getAllCharacters } from '../../apiCalls';
@@ -14,6 +14,7 @@ function App() {
   const [allHeroes, setAllHeroes] = useState([]);
   const [randomVillain, setRandomVillain] = useState(0);
   const [randomHero, setRandomHero] = useState(0);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +32,8 @@ function App() {
             character.biography.alignment === 'bad'
         );
 
-        const isValid = (value => value && value !== '-' && value !== 'undefined');
+        const isValid = (value) =>
+          value && value !== '-' && value !== 'undefined';
 
         const cleanData = getHeroVillain.map((character) => {
           const hasRequiredValues =
@@ -81,6 +83,7 @@ function App() {
       })
       .catch((error) => {
         console.log(error.message);
+        setError(`${error.message}: Please try again.`);
       });
   }, []);
 
@@ -102,6 +105,8 @@ function App() {
   return (
     <main>
       <Header />
+      {error ? <ErrorComponent error={error} /> :
+      <>
       <NavigationBar
         setRandomVillain={setRandomVillain}
         setRandomHero={setRandomHero}
@@ -113,15 +118,16 @@ function App() {
             <RandomCharacterSelection
               handleRandomVillainSelection={handleRandomVillainSelection}
               handleRandomHeroSelection={handleRandomHeroSelection}
-            />
+              />
           }
         />
         <Route
           path="/characterDetails/:id"
           element={<CharacterDetails filteredData={filteredData} />}
         />
+        <Route path="*" element={<ErrorComponent error={error} />} />
       </Routes>
-      {/* <Footer /> */}
+      </>}
     </main>
   );
 }
