@@ -1,26 +1,57 @@
 .random-container {
     max-width: 100%;
     text-align: center;
-    /* margin: 0 auto; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'introduction-text'
+        'random-hero'
+        'random-villain';
 }
 
+.introduction-text {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: .5rem 0 .25rem 0;
+    grid-area: introduction-text;
+}
 
+.random-hero {
+    grid-area: random-hero;
+}
+
+.random-villain {
+    grid-area: random-villain;
+}
 
 .random-hero,
 .random-villain {
-    max-width: 100%;
+    max-width: 96%;
     margin: 0 auto .5rem auto;
-    /* background-color: blue; */
 }
 
 .random-hero button,
 .random-villain button {
     padding: 0;
     border-color: black;
-    border-width: 2px;
+    border-width: 6px;
+    border-radius: 6px;
     max-width: calc(100% - 4px);
     cursor: pointer;
 }
+
+button:hover {
+    outline: 2px #F9F9F9 solid;
+    outline-offset: 0;
+    box-shadow: 0 0 20px 5px white;
+}
+
+*:focus-visible {
+    outline: 2px #F9F9F9 solid;
+    outline-offset: 0;
+    box-shadow: 0 0 20px 5px white;
+  }
 
 .hero-image {
     padding: 1rem;
@@ -34,7 +65,6 @@
 
 .random-container img {
     max-width: 100%;
-    /* margin: .15rem; */
 }
 
 .hero-heading,
@@ -44,10 +74,36 @@
     padding: 1rem 0;
 }
 
-/* @media screen and (min-width: 485px) {
-.random-container {
-    max-width: 485px;
-    margin: 0 auto;
-}
+@media screen and (min-width: 500px) {
     
-} */
+    .random-container {
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'introduction-text introduction-text'
+            'random-hero random-villain';
+        grid-gap: .5rem;
+    }
+    
+    .random-hero button,
+    .random-villain button {
+        max-width: 100%;
+    }
+    
+    .introduction-text {
+        grid-area: introduction-text;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+        
+    }
+
+    @media screen and (min-width: 1200px) {
+        .random-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+    }
