@@ -1,4 +1,5 @@
 import './ErrorComponent.css';
+import PropTypes from 'prop-types';
 
 import dogs from '../../assets/CutePups.png';
 import { Link } from 'react-router-dom';
@@ -27,3 +28,7 @@ function ErrorComponent({ error }) {
 }
 
 export default ErrorComponent;
+
+ErrorComponent.propTypes = {
+  error: PropTypes.string,
+}

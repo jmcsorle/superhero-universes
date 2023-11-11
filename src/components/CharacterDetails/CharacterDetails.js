@@ -2,8 +2,8 @@ import './CharacterDetails.css';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import ImageCard from '../ImageCard/ImageCard';
 import Quiz from '../Quiz/Quiz';
-// import ErrorComponent from '../ErrorComponent/ErrorComponent';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function CharacterDetails({ filteredData }) {
   const { id } = useParams();
@@ -20,12 +20,6 @@ function CharacterDetails({ filteredData }) {
     return <p>Loading ...</p>;
   }
 
-  // if (!currentCharacter) {
-  //   return (
-  //     <ErrorComponent error={`Character with ID ${id} not found.`} />
-  //   )
-  // }
-
   return (
     <div className="character-details">
       <ImageCard character={currentCharacter} className="character-image" />
@@ -39,3 +33,30 @@ function CharacterDetails({ filteredData }) {
 }
 
 export default CharacterDetails;
+
+CharacterDetails.propTypes = {
+  filteredData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      powerstats: PropTypes.shape({
+        intelligence: PropTypes.number.isRequired,
+        strength: PropTypes.number.isRequired,
+        speed: PropTypes.number.isRequired,
+        durability: PropTypes.number.isRequired,
+        power: PropTypes.number.isRequired,
+        combat: PropTypes.number.isRequired,
+      }),
+      name: PropTypes.string.isRequired,
+      imageMD: PropTypes.string.isRequired,
+      imageLG: PropTypes.string.isRequired,
+      race: PropTypes.string.isRequired,
+      height: PropTypes.string.isRequired,
+      weight: PropTypes.string.isRequired,
+      publisher: PropTypes.string.isRequired,
+      fullName: PropTypes.string.isRequired,
+      alignment: PropTypes.string.isRequired,
+      groupAffiliation: PropTypes.string.isRequired,
+    })
+  ),
+};
+

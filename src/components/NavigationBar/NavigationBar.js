@@ -1,12 +1,12 @@
 import './NavigationBar.css';
 import { Link, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function NavigationBar({ setRandomHero, setRandomVillain, error }) {
-  localStorage.removeItem('currentCharacter');
+function NavigationBar({ setRandomHero, setRandomVillain }) {
   const location = useLocation();
   const handleHomeClick = () => {
-    setRandomHero(0);
-    setRandomVillain(0);
+    setRandomHero({});
+    setRandomVillain({});
   };
 
   return (
@@ -22,3 +22,8 @@ function NavigationBar({ setRandomHero, setRandomVillain, error }) {
 }
 
 export default NavigationBar;
+
+NavigationBar.propTypes = {
+  setRandomHero: PropTypes.func.isRequired,
+  setRandomVillain: PropTypes.func.isRequired,
+}

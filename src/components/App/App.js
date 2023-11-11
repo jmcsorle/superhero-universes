@@ -12,8 +12,8 @@ function App() {
   const [filteredData, setFilteredData] = useState([]);
   const [allVillains, setAllVillains] = useState([]);
   const [allHeroes, setAllHeroes] = useState([]);
-  const [randomVillain, setRandomVillain] = useState(0);
-  const [randomHero, setRandomHero] = useState(0);
+  const [randomVillain, setRandomVillain] = useState({});
+  const [randomHero, setRandomHero] = useState({});
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
