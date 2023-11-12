@@ -17,5 +17,8 @@ describe('should load the home page from the RandomCharacterSelection component'
       .get('.villain-button').should('exist');
       cy.get('.hero-heading').should('exist');
       cy.get('.villain-heading').should('exist');
+      cy.get('.hero-image > img').click()
+      cy.wait('@getAllCharacters')
+      cy.url('eq', 'http://localhost:3000/characterDetails/1')
   });
 });
