@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Superhero Universes - Mod 3 Showcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
+Superhero Universes is an app that uses the [superhero-api](https://akabab.github.io/superhero-api/api/). This API is a "Multiple universes superheroes open-source REST API." The purpose of the application is to help budding comic book enthusiasts test their knowledge of characters in Marvel and DC comic books. When a user opens the app, they are given the opportunity to choose a random hero or a random villain. Once they have made a selection, details of the character are provided. The user can further interact with the app by selecting whether the character is from the Marvel Universe or the DC Universe. Once they make a selection, they are given feedback and shown some additional details about the character.
 
-## Available Scripts
+## Deployed Link
+[Superhero Universes Deployed App](https://superhero-universes.vercel.app/)
 
-In the project directory, you can run:
+## Installation Instructions:
+[Superhero Universes](https://github.com/jmcsorle/superhero-universes) works in a browser, but if you would like to build your own version, you can clone the repository to your local machine as follows:
 
-### `npm start`
+1. Go to the [Superhero Universes Repository](https://github.com/jmcsorle/superhero-universes).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Select the "fork" option on the upperright and follow the prompts to save a fork to your GitHub account:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Fork and Clone Options in GitHub](https://user-images.githubusercontent.com/7227063/282277371-29519026-b72f-4983-ad46-a6900d41c587.png)
 
-### `npm test`
+3. Once you have forked the repository, choose the "Code" drop down to copy the SSH key for cloning:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Open your preferred command-line interface tool (e.g. Terminal) and create a directory where you would like to clone the repository.
 
-### `npm run build`
+5. Change directories into the directory your created.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. Without the brackets, type [git clone], type a space, then use Command-v on a Mac, or Control-v on PC/Android to past in the SSH key you copied in step 3.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies used to build this app:
+- HTML
+- CSS
+- JavaScript
+- React JavaScript Library
+- Router
+- Cypress
+- Figma
+- The Paciello Group, Coulour Contrast Analyser for testing color contrast
+- Git / Github
+- Vercel
+- Github Project
+- VS Code
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Preview of App:
 
-### `npm run eject`
+### Mobile View of the Home Page
+![Mobile View of Home Page](https://user-images.githubusercontent.com/7227063/282279107-b2789e64-c791-4f26-aa86-47cfe59b1608.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Character Details Page:
+![Character Details Page](https://user-images.githubusercontent.com/7227063/282277539-6e9610ab-c257-4072-b06b-d041b3a6c71f.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Gif
+![SuperheroUniverses](https://user-images.githubusercontent.com/7227063/282278166-94128d98-45dd-4ac0-938a-00296f986410.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Context:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Superhero Universes is a Front End, final Showcase project for module 3 of the Turing School of Software and Design.  
 
-## Learn More
+## Contributors:
+Jan McSorley [jmcsorle](https://github.com/jmcsorle)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Learning Goals:
+The learning goals of this project included: 
+- Demonstrate mastery of the following:
+    - React
+    - Router
+    - Asynchronous JavaScript
+    - End to end testing with Cypress
+- Create personas and user stories to describe a target audience.
+- Work within constraints to deliver a product for a niche audience that helps solve a problem unique to them.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Attributions:
+Art for the home page was found on Pintrist:
+- [Captain America](https://www.pinterest.com/pin/406449935135446757/)
+- [Joker](https://www.pinterest.com/pin/4433299627509216/)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The [superhero-api](https://akabab.github.io/superhero-api/api/) is available on GitHub. It is very robust and free for anyone to use.
