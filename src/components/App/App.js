@@ -83,7 +83,7 @@ function App() {
       })
       .catch((error) => {
         console.log(error.message);
-        // navigate('/error')
+        navigate('/error')
         setError(`${error.message}: We're sorry. It looks like the server is down. Please try again later.`);
       });
   }, []);
@@ -109,8 +109,8 @@ function App() {
   return (
     <main>
       <Header />
-      {/* {error ? <ErrorComponent error={error} /> : */}
-      {/* <> */}
+      {error ? <ErrorComponent error={error} /> :
+      <>
       <NavigationBar
         setRandomVillain={setRandomVillain}
         setRandomHero={setRandomHero}
@@ -129,9 +129,9 @@ function App() {
           path="/characterDetails/:id"
           element={<CharacterDetails filteredData={filteredData} />}
         />
-        {/* <Route path="*" element={<ErrorComponent error={error} />} /> */}
+        <Route path="*" element={<ErrorComponent error={error} />} />
       </Routes>
-      {/* </>} */}
+      </>}
     </main>
   );
 }
