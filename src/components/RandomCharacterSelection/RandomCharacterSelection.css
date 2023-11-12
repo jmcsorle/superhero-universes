@@ -96,14 +96,12 @@ button:hover {
         font-size: 2rem;
         font-weight: bold;
         margin: 1rem 0;
-    }
-        
-    }
+    }  
+}
 
-    @media screen and (min-width: 1200px) {
-        .random-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-    }
+@media screen and (min-width: 1200px) {
+    .random-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }     
+}

@@ -7,6 +7,7 @@ function RandomCharacterSelection({
   handleRandomHeroSelection,
   handleRandomVillainSelection,
 }) {
+  
   return (
     <div className="random-container">
       <p className="introduction-text">

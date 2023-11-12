@@ -83,13 +83,9 @@ function App() {
       })
       .catch((error) => {
         console.log(error.message);
-        navigate('/error')
-        setError(`${error.message}: We're sorry. It looks like the server is down. Please try again later.`);
+        setError(`${error.message}`);
       });
   }, []);
-
-  console.log("ALL VILLAINS", allVillains);
-  console.log("ALL Heroes", allHeroes);
 
   const getRandomCharacter = (characterList) =>
     characterList[Math.floor(characterList.length * Math.random())];
@@ -109,29 +105,32 @@ function App() {
   return (
     <main>
       <Header />
-      {error ? <ErrorComponent error={error} /> :
-      <>
-      <NavigationBar
-        setRandomVillain={setRandomVillain}
-        setRandomHero={setRandomHero}
-      />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <RandomCharacterSelection
-              handleRandomVillainSelection={handleRandomVillainSelection}
-              handleRandomHeroSelection={handleRandomHeroSelection}
-              />
-          }
-        />
-        <Route
-          path="/characterDetails/:id"
-          element={<CharacterDetails filteredData={filteredData} />}
-        />
-        <Route path="*" element={<ErrorComponent error={error} />} />
-      </Routes>
-      </>}
+      {error ? (
+        <ErrorComponent error={error} />
+      ) : (
+        <>
+          <NavigationBar
+            setRandomVillain={setRandomVillain}
+            setRandomHero={setRandomHero}
+          />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <RandomCharacterSelection
+                  handleRandomVillainSelection={handleRandomVillainSelection}
+                  handleRandomHeroSelection={handleRandomHeroSelection}
+                />
+              }
+            />
+            <Route
+              path="/characterDetails/:id"
+              element={<CharacterDetails filteredData={filteredData} />}
+            />
+            <Route path="*" element={<ErrorComponent error={error} />} />
+          </Routes>
+        </>
+      )}
     </main>
   );
 }

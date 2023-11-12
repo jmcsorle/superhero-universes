@@ -40,7 +40,6 @@ function Quiz({ character }) {
         </div>
         <div className="answer-container">
           {feedback && <p className="feedback">{feedback}</p>}
-          {/* <p className="feedback">Affiliations include: </p> */}
           {showAffiliations && <p className="feedback">Affliations include: <br />{affiliations}</p>}
         </div>
       </div>
