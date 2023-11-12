@@ -3,7 +3,6 @@
 }
 
 .character-image img {
-    /* width: calc(100% - 6px); */
     max-width: 90%;
     border-radius: 6px;  
 }
